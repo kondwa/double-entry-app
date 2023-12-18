@@ -1,0 +1,62 @@
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components: []
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: sidebar_pnl
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Link
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Balance Sheet, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: bs_link
+    layout_properties: {grid_position: 'WNRNDP,VUOPGW'}
+    event_bindings: {click: bs_link_click}
+  - type: Link
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Profit and Loss, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: pl_link
+    layout_properties: {grid_position: 'HUYPLR,JHMGQC'}
+    event_bindings: {click: pl_link_click}
+  - type: Link
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Record New Transaction, font_size: null, wrap_on: mobile,
+      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: new_tx_link
+    layout_properties: {grid_position: 'YJOYOU,YVGXDM'}
+    event_bindings: {click: new_tx_link_click}
+  - type: Link
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Account History, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: hist_link
+    layout_properties: {grid_position: 'AJSNXZ,LNAWOK'}
+    event_bindings: {click: hist_link_click}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Anvil Accounting Demo, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {slot: title}

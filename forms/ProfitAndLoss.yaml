@@ -1,0 +1,101 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_1
+  layout_properties: {grid_position: 'NFZVPW,HDBBCT'}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Profit and Loss, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: headline_1
+    layout_properties: {grid_position: 'OHKOVR,AYOMVA'}
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'JPNHDI,PFPJZE'}
+    components:
+    - type: Label
+      properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'From:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {}
+    - type: DatePicker
+      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+        placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+        font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+        date: '2019-01-01', min_date: '', background: '', bold: false, underline: false,
+        format: ''}
+      name: from_date_picker
+      layout_properties: {}
+      event_bindings: {change: update_date}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_1
+      layout_properties: {width: 21}
+    - type: Label
+      properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Until:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {}
+    - type: DatePicker
+      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+        placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+        font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+        date: '2020-01-01', min_date: '', background: '', bold: false, underline: false,
+        format: ''}
+      name: to_date_picker
+      layout_properties: {}
+      event_bindings: {change: update_date}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {title: Account, id: LHQGNN, data_key: name}
+      - {width: '150', title: Gain / Loss, id: EDOEHF, data_key: change}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 0
+      visible: false
+      show_page_controls: false
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'YXGHTW,TXDGKT'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: ProfitAndLossRowTemplate}
+      name: repeating_panel_1
+      layout_properties: {}
+    - type: DataRowPanel
+      properties: {}
+      name: total_rowpnl
+      layout_properties:
+        col_widths: {}
+        grid_position: SEUHWD,OLYWIN
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Total:', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_2_copy
+        layout_properties: {column: LHQGNN}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: total_lbl
+        layout_properties: {column: EDOEHF}

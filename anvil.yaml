@@ -1,0 +1,13 @@
+correct_dependency_ids: {}
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+package_name: DoubleEntry
+allow_embedding: false
+name: Clone of Accounting App
+runtime_options: {version: 1, server_version: python2-sandbox, server_spec: null}
+metadata: {logo_img: meredydd@senatehouse.org}
+startup_form: Home
+renamed: true

@@ -1,0 +1,85 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{"FNNXDM":10,"TRRTPK":50,"OKMAAK":10,"QKASRN":50,"HMASCB":10,"KZIGYC":50,"XJYTFS":10,"LGOQZO":50,"VKIOQS":10,"OFQSJF":50}'}
+  name: card_1
+  layout_properties: {grid_position: 'LPEMMY,YLIIMY'}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: New Transaction, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: headline_1
+    layout_properties: {grid_position: 'ITKTJP,AVYYRW'}
+  - type: Label
+    properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'From:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'ZKBBMG,FNNXDM'}
+  - type: DropDown
+    properties: {}
+    name: from_dd
+    layout_properties: {grid_position: 'ZKBBMG,TRRTPK'}
+  - type: Label
+    properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'To:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'WOMWWI,OKMAAK'}
+  - type: DropDown
+    properties: {}
+    name: to_dd
+    layout_properties: {grid_position: 'WOMWWI,QKASRN'}
+  - type: Label
+    properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Date:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'PPSJWV,VKIOQS'}
+  - type: DatePicker
+    properties: {}
+    name: date_picker
+    layout_properties: {width: 205, grid_position: 'PPSJWV,OFQSJF'}
+  - type: Label
+    properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Amount:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'MKFGHI,HMASCB'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '0.00',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: amount_box
+    layout_properties: {grid_position: 'MKFGHI,KZIGYC'}
+  - type: Label
+    properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Description:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'TBLHQZ,XJYTFS'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Sale to Customer Name,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: description_box
+    layout_properties: {grid_position: 'TBLHQZ,LGOQZO'}
+  - type: Button
+    properties: {role: primary-color, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add Entry, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'VETDTN,BCULCH'}
+    event_bindings: {click: button_1_click}

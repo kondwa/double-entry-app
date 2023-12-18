@@ -1,0 +1,10 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: none,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: profit_lbl
+  layout_properties: {column: EDOEHF}
+  data_bindings:
+  - {property: text, code: '"$ %+1.2f" % self.item[''profit'']'}

@@ -1,0 +1,74 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: account_card
+  layout_properties:
+    col_widths: {}
+    grid_position: TEHBSM,GJENRO
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: View Account, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: headline_1
+    layout_properties: {grid_position: 'KYNXGL,AOILOQ'}
+  - type: DropDown
+    properties: {}
+    name: account_dd
+    layout_properties: {grid_position: 'IUFCDJ,RZMUYY'}
+    event_bindings: {change: account_dd_change}
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: account_history_pnl
+    layout_properties: {grid_position: 'ACGHNJ,UFJLGI'}
+    components:
+    - type: FlowPanel
+      properties: {}
+      name: flow_panel_1
+      layout_properties: {grid_position: 'XKSDPC,QGJEYP'}
+      components:
+      - type: Label
+        properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Account Type:', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'CHHHGT,NXRMPL'}
+      - type: Label
+        properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: type_lbl
+        layout_properties: {}
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {width: 148, title: Date, id: DFGVKX, data_key: date, expand: false}
+        - {title: Description, id: XNHRRQ, data_key: description}
+        - {width: '150', title: Change, id: AURZQN, data_key: change, expand: false}
+        - {width: '150', title: Balance, id: XZERVP, data_key: balance}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: data_grid_1
+      layout_properties: {grid_position: 'DYAXPJ,PJWJAQ'}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: AccountHistoryRowTemplate}
+        name: repeating_panel_1
+        layout_properties: {}
