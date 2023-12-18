@@ -1,9 +1,10 @@
+from ._anvil_designer import BalanceSheetRowTemplateTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
 from anvil.tables import app_tables
 
-class ProfitAndLossRowTemplate(ProfitAndLossRowTemplateTemplate):
+class BalanceSheetRowTemplate(BalanceSheetRowTemplateTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

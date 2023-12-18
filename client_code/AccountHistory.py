@@ -1,3 +1,4 @@
+from ._anvil_designer import AccountHistoryTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
